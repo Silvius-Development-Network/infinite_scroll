@@ -1,0 +1,38 @@
+{
+  "name": "infinite_scroll",
+  "version": "1.0.0",
+  "description": "Loading 10  pokemon's  at a time using intersection observer",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Silvius-Development-Network/infinite_scroll.git"
+  },
+  "keywords": [
+    "pokemon",
+    "intersection",
+    "observer",
+    "gulp"
+  ],
+  "author": "Silviu & Sune",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "flat-map": "^1.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "bugs": {
+    "url": "https://github.com/Silvius-Development-Network/infinite_scroll/issues"
+  },
+  "homepage": "https://github.com/Silvius-Development-Network/infinite_scroll#readme"
+}
