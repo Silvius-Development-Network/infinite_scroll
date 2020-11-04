@@ -5,6 +5,7 @@ var connect = require("gulp-connect");
 var babel = require('gulp-babel');
 var concat = require('gulp-concat');
 var sourcemap = require("gulp-sourcemaps");
+var imagemin = require("gulp-imagemin");
 // var flatMap = require('flat-map').default
 // var scaleImages = require('gulp-scale-images');
 
@@ -37,6 +38,15 @@ function processJS() {
 		.pipe(connect.reload());
 }
 
+function processImages(){
+	return gulp.src(["src/img/**/*", "!src/img/**/thumb.db"]) 
+		.pipe(imagemin([
+			imagemin.mozjpeg({quality: 100})
+		]))
+		.pipe(gulp.dest("dist/assets/img"))
+		.pipe(connect.reload())
+}
+
 function watch() {
 	gulp.watch("src/sass/**/*.scss",
 	{ ignoreInitial: false },
@@ -46,6 +56,8 @@ function watch() {
 	processHTML);
 	gulp.watch("src/js/**/*.js", {ignoreInitial: false},
 	processJS);
+	gulp.watch("src/img/**/*", {ignoreInitial: false},
+	processImages);
 	
 }
 
